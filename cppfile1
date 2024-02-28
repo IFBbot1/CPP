@@ -1,1 +1,156 @@
+#include <iostream>
+#include <string>
 
+using namespace std;
+
+/*int main()
+{
+    setlocale(0, "Russian");
+    int val;
+    int hah;
+    cin >> val;
+
+    while (val > 0){
+        hah = val%2;
+        cout << hah;
+        val = val/2;
+    }
+    return 0;
+}
+
+int main()
+{
+    setlocale(0, "Russian");
+    int val;
+    int hah;
+    cin >> val;
+
+    for (int hah = val; hah > 0; hah/=2){
+        cout << hah%2;
+    }
+    return 0;
+}
+
+
+int main()
+{
+    setlocale(0, "Russian");
+    int num;
+
+    cin >> num;
+    while (num < 100){
+        num = num + 7;
+        if ((num%3) != 0){
+            cout << num << endl;
+        }else{
+            continue;
+            if ((num%8) != 0){
+                cout << num << endl;
+            }else{
+                break;
+                }}
+
+            }
+}
+
+1 задание
+
+int main()
+{
+    setlocale(0, "Russian");
+    int val;
+    cin >> val;
+    if (val < 0){
+        val = val * (-1);
+    }
+    cout << val;
+    return 0;
+}
+
+
+2 задание
+
+int main()
+{
+    setlocale(0, "Russian");
+    int asd;
+    int a;
+    int b;
+    cin >> asd;
+    a = asd * asd - 10 * asd - 2;
+    b = asd + 2;
+    cout << "Число а" << a << '\n';
+    cout << "b " << b << '\n';
+    if (a > b){
+        cout << "а больше";
+    }else{
+        cout << "b больше";
+        }
+    return 0;
+}
+
+3 задание
+
+int main()
+{
+    setlocale(0, "Russian");
+    int val;
+    int val0;
+    cin >> val;
+    while((val%10) != 0){
+        cin >> val0;
+        val= val + val0;
+        cout << val << '\n';
+    }
+    return 0;
+}
+
+4 задание
+
+int main()
+{
+    setlocale(0, "Russian");
+    int val;
+    int val2;
+    int val3;
+    cin >> val;
+    cin >> val2;
+    cin >> val3;
+    if ((val3 <= val2) && (val3 >= val)){
+        cout << "Третье число попадает в интервал первых двух";
+    }else{
+        cout << "Третье число не попадает в интервал первых двух";
+    }
+    return 0;
+}
+
+
+int main()
+{
+    setlocale(0, "Russian");
+    int val;
+    int val2;
+    char op;
+    cout << "Введите числа" << '\n';
+    cin >> val;
+    cin >> val2;
+    cout << "Введите операцию (+, -, *, /)" << '\n';
+    cin >> op;
+    switch(op){
+        case '+':
+            cout << val + val2;
+            break;
+        case '*':
+            cout << val * val2;
+            break;
+        case '-':
+            cout << val - val2;
+            break;
+        case '/':
+            cout << val / val2;
+            break;
+        default: cout << "В след. раз попробуй";
+        }
+    return 0;
+}
+*/
