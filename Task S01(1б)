@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a1 = 5; // целочисленная переменная
+    float a2 = 5.3; // число с плавающей запятой
+    bool a3 = 'false'; // логический оператор, принимает значение = 1
+    char a4 = '5'; // символ, принимает значение, равное номеру символа в алфавите
+
+    cout << a1 / 2 << endl;
+    cout << a2 - 10 << endl;
+    cout << a3 * 15 << endl;
+    cout << a4 + 100 << endl;
+    return 0;
+}
