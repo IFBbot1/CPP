@@ -1,0 +1,17 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+int main(){
+    setlocale(0, "Russian");
+    string huh[] = {"0 - Sub-Zero", "1 - Liu Kang", "2 - Scorpion", "3 - Johnny Kage", "4 - Shao Kan", "5 - Raiden", "6 - Sindel", "7 - Kitana", "8 - Mileena", "9 - Kano"};    //создание массива
+    int a;
+    cout << "Введите число между 0 и 9" << endl;    //ввод числа
+    cin >> a;
+    if (a < 0, a > 9){           //ошибка ввода числа между 0 и 9
+        cerr << "Число должно быть между 0 и 9" << endl;;
+        cin.clear();            //удаление неправильного числа
+        cin >> a;               //ввод нового числа
+    }
+    cout << huh[a];     //вывод названия числа
+    return 0;}
