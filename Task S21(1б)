@@ -8,20 +8,20 @@ int main()
     setlocale(0, "Russian");
 
     int A, B, C;
-    cout << "Введите число A" << endl;
+    cout << "Введите число A" << endl;     //Ввод числа А
     cin >> A;
-    cout << "Введите число B" << endl;
+    cout << "Введите число B" << endl;     //Ввод числа В
 
-    if (!( cin >> B)||B <= A){
+    if (!( cin >> B)||B <= A){     //Ошибка при неправильном вводе числа В
         cerr << "B должно быть больше A" << endl;
-        cin.clear();
-        cin >> B;
+        cin.clear();    //Удаление неправильного числа В
+        cin >> B;     //Ввод нового числа В
     }
-    ofstream outputFile("output.txt");
+    ofstream outputFile("output.txt");    //создание/обращение к файлу
 
-    for (int i = A; i <= B; i++){
+    for (int i = A; i <= B; i++){    //цикл для перебора чисел
         int C = i*3;
-        outputFile << C << endl;
+        outputFile << C << endl;    //ввод чисел в файл
     }
 
     outputFile.close();
