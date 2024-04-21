@@ -1,0 +1,30 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(0, "Russian");
+
+    int A, B, C;
+    cout << "Введите число A" << endl;
+    cin >> A;
+    cout << "Введите число B" << endl;
+
+    if (!( cin >> B)||B <= A){
+        cerr << "B должно быть больше A" << endl;
+        cin.clear();
+        cin >> B;
+    }
+    ofstream outputFile("output.txt");
+
+    for (int i = A; i <= B; i++){
+        int C = i*3;
+        outputFile << C << endl;
+    }
+
+    outputFile.close();
+
+    return 0;
+}
