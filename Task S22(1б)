@@ -1,0 +1,19 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+
+int main(){
+    setlocale(0, "Russian");
+    ifstream feelmahar("output.txt");
+    if (!feelmahar.is_open()){
+        cout << "Файл открыт" << endl;
+        return 0;
+    }
+    int n = 1;
+    while (feelmahar >> n){
+        cout << n << " Число" << endl;
+    }
+    feelmahar.close();
+    return 0;
+}
