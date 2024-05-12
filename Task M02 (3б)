@@ -1,0 +1,27 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "Russian");
+    int N, A;
+    cout << "Введите количество сторон" << endl;
+    if (!( cin >> N)||N <= 2){
+        cerr << "Нет такого многоугольника" << endl;    //ошибка при неправильном вводе
+        cin.clear();
+        cin >> N;
+    }
+    cout << "Введите длину сторон" << endl;
+    cin >> A;
+    if(N == 3){
+        cout << "Площадь треугольника равна " << pow(A, 2)*(pow(3, 0.5))/4;
+    }
+    else if(N == 4){
+        cout << "Площадь квадрата равна " << pow(A, 2);
+        }
+    else{
+        cout << "Площадь " << N << "-угольника равна " << (N*pow(A,2))/(4*tan(3.14 / N));   //общая формула площади правильного многоугольника
+    }
+    return 0;
+}
