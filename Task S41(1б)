@@ -1,0 +1,18 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+float squared_sum(float a, float b){    //функция
+    return pow((a+b), 2);
+    }
+
+int main(){
+
+    cout << squared_sum(12, 6) <<"\n"; // 324   (из примера задания)
+    cout << squared_sum(12, -6) <<"\n"; // 36
+
+    cout << squared_sum(2.5, 12.4) << endl;
+    cout << squared_sum(-14.25, 15.15) << endl;
+
+    return 0;
+}
