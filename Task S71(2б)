@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class CreditCard{
+private:
+    int Number;
+    float Balance;
+public:
+    CreditCard(int, float);
+    void Put(float V);
+    void Take(float V);
+    int get_money(){
+        return Balance;};
+};
+
+CreditCard::CreditCard(int num, float bal){
+    Number = num;
+    Balance = bal;
+    }
+
+void CreditCard::Put(float V) {
+    Balance = Balance + V;
+}
+void CreditCard::Take(float V) {
+        if (Balance < V)    //условие достаточных средств на балансе
+            cerr << "Недостаточно средств" << endl;     //сообщение при ощибке
+        else
+            Balance = Balance - V;
+    }
+int main() {
+    setlocale(0, "Russian");
+    CreditCard firstCC(1234, 50); // создание объекта и обращение к методам через указатель
+    CreditCard *ptr = &firstCC;
+    ptr->Put(30);
+    ptr->Take(20);
+    cout << "У вас на карте: " << firstCC.get_money() << " рублей." << endl;
+    return 0;
+}
