@@ -1,0 +1,52 @@
+include <iostring>
+using namespace std;
+class CreditCard{
+private:
+    int Number;
+    float Balance;
+public:
+    CreditCard(int, float);
+    void Put(float V);
+    void Take(float V);
+    int get_money(){
+        return Balance;};
+    void Transfer(CreditCard& C1, CreditCard& C2, double V) {
+    if (&C1 == &C2) {
+        cerr << "Введите другую карту" << endl;
+        return;
+    }
+
+    if (C1.get_money() < V) {
+        cerr << "Недостаточно средств для перевода" << endl;
+        return;
+    }
+
+    C1.Balance = C1.Balance -(V);
+    C2.Balance = C2.Balance +(V);
+}
+};
+
+CreditCard::CreditCard(int num, float bal){
+    Number = num;
+    Balance = bal;
+    }
+
+void CreditCard::Put(float V) {
+    Balance = Balance + V;
+}
+void CreditCard::Take(float V) {
+        if (Balance < V)
+            cerr << "Недостаточно средств" << endl;
+        else
+            Balance = Balance - V;
+    }
+int main() {
+    setlocale(0, "Russian");
+    CreditCard card1(1234, 2000);
+    CreditCard card2(4321, 1000);
+
+    card1.Transfer(card1, card2, 500);
+    cout << "У вас на карте: " << card2.get_money() << " рублей";
+
+    return 0;
+}
